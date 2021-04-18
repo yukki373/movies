@@ -7,6 +7,14 @@
 
     <div class="profile-name mt-4">
       <%= @user.nickname %>
+    </div><br>
+
+    <div class="prafile-text">
+      見たい映画：<%= @user.movie_information%>
+    </div><br>
+
+    <div class="prafile-text">
+      自己紹介：<%= @user.self_introduction%>
     </div>
 
   </div>
@@ -20,7 +28,7 @@
         <span>ログアウト</span>
       </div>
       <div class="user-action-common">
-        <%= link_to "#" do %>
+        <%= link_to edit_user_registration_path do %>
           <i class="fas fa-pencil-alt fa-2x"></i>
         <% end %>
         <span>情報を編集<span>
