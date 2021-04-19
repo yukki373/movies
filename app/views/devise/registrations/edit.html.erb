@@ -20,15 +20,15 @@
     </div>
 
     <div class="form-group">
-      <%= f.text_field :name, class: "form-control", placeholder: "ニックネーム" %>
+      <%= f.text_field :nickname, autofocus: true,  autocomplete: "nickname", class: "form-control", placeholder: "ニックネーム" %>
     </div>
 
     <div class="form-group">
-      <%= f.text_field :movie_information, class: "form-control", placeholder: "見たい映画", rows: "1" %>
+      <%= f.text_field :movie_information, autofocus: true,  autocomplete: "movie_information", class: "form-control", placeholder: "見たい映画", rows: "1" %>
     </div>
 
     <div class="form-group">
-      <%= f.text_area :self_introduction, class: "form-control", placeholder: "自己紹介", rows: "4" %>
+      <%= f.text_area :self_introduction, autofocus: true,  autocomplete: "self_introduction", class: "form-control", placeholder: "自己紹介", rows: "4" %>
     </div>
 
     <div class="user-edit__submit-btn">
