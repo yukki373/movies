@@ -9,5 +9,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :index]
 
-  resource :reactions, only: [:create]
+  resources :reactions, only: [:create]
+
+  resources :matching, only: [:index]
+
 end
