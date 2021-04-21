@@ -16,6 +16,7 @@
 ### Association
 
 - has_many :reactions
+- has_many :chat_room_users
 
 ## reactions テーブル
 
@@ -28,3 +29,26 @@
 ### Association
 
 - belongs_to :user
+
+## chat_room_users テーブル
+
+| Column                   | Type       | Options                       |
+| ------------------------ | ---------- | ------------------------------|
+| chat_room_id             | references | null: false foreign_key: true |
+| user_id                  | references | null: false foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :chat_room
+
+## chat_rooms テーブル
+
+| Column                   | Type       | Options                       |
+| ------------------------ | ---------- | ------------------------------|
+|                          |            |                               |
+
+### Association
+
+- mas_many :chat_room_users
+

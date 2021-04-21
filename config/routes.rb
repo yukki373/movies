@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   resources :matching, only: [:index]
 
+  resources :chat_rooms, only: [:create, :show]
+  
 end
