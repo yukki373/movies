@@ -52,3 +52,15 @@
 
 - mas_many :chat_room_users
 
+## chat_messages テーブル
+
+| Column                   | Type       | Options                       |
+| ------------------------ | ---------- | ------------------------------|
+| content                  | text       | null: false                   |
+| user_id                  | references | null: false foreign_key: true |
+| chat_room_id             | references | null: false foreign_key: true |
+
+### Association
+
+- belongs_to :user
+
