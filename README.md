@@ -8,7 +8,8 @@
 | email                    | string  | unique: true null: false |
 | encrypted_password       | string  | null: false              |
 | gender                   | integer | null: false              |
-| birthday                 | data    | null: false              |
+| birthday                 | date    | null: false              |
+| residence                | string  |                          |
 | movie_information        | string  |                          |
 | self_introduction        | text    |                          |
 | profile_image            | string  |                          |
