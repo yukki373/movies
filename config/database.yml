@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
   database: movies_production
   username: movies
   password: <%= ENV['MOVIES_DATABASE_PASSWORD'] %>
