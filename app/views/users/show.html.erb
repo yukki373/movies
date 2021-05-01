@@ -10,11 +10,7 @@
     <% end %>
 
     <div class="profile-name mt-4">
-      <%= @user.nickname %>
-    </div><br>
-
-    <div class="prafile-text">
-      居住地：<%= @user.residence%>
+      <%= @user.nickname %> <%= @age %>歳 <%= @user.residence%>
     </div><br>
 
     <div class="prafile-text">
@@ -30,7 +26,7 @@
   <% if current_user.id == @user.id %>
     <div class="user-action">
       <div class="user-action-common">
-      <%= link_to destroy_user_session_path, method: :delete do %>
+        <%= link_to destroy_user_session_path, method: :delete do %>
           <i class="fas fa-sign-out-alt fa-2x"></i>
         <% end %>
         <span>ログアウト</span>
