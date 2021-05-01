@@ -24,7 +24,7 @@
     </div>
 
     <div class="form-group">
-      <%= f.text_field :residence, autofocus: true,  autocomplete: "residence", class: "form-control", placeholder: "居住地", rows: "1" %>
+      <%= f.collection_select(:residence, Residence.all, :name, :name, {}, class:"form-control") %>
     </div>
 
     <div class="form-group">
