@@ -6,8 +6,13 @@ Rails.application.routes.draw do
     }
 
   root 'top#index'
+  resources :users do
+    collection do
+      get 'search'
+    end
+  end
 
-  resources :users, only: [:show, :index]
+  resources :users, only: [:show, :index, :search]
 
   resources :reactions, only: [:create]
 
