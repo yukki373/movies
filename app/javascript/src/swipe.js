@@ -1,4 +1,4 @@
-if (location.pathname == "/users"){
+if (location.pathname == "/users" || location.pathname == "/users/search"){
   $(function(){
   let allCards = document.querySelectorAll('.swipe--card');
   let swipeContainer = document.querySelector('.swipe');
