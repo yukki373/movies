@@ -12,14 +12,19 @@
     <div class="profile-name mt-4">
       <%= @user.nickname %> <%= @age %>歳 <%= @user.residence%>
     </div><br>
+    
+    <% if @user.movie_information.present? %>
+      <div class="prafile-text">
+        <p>◎観たい映画</p>
+        <%= @user.movie_information%>
+      </div><br>
+    <% end %>
 
-    <div class="prafile-text">
-      見たい映画：<%= @user.movie_information%>
-    </div><br>
-
-    <div class="prafile-text">
-      <p>自己紹介</p><%= @user.self_introduction%>
-    </div>
+    <% if @user.self_introduction.present? %>
+      <div class="prafile-text">
+        <p>◎自己紹介</p><%= safe_join(@user.self_introduction.split("\n"),tag(:br))%>
+      </div>
+    <% end %>
 
   </div>
 
