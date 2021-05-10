@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   private
 
   def search_user
-    @q = User.ransack(params[:q])
+    @q = User.where.not(id: current_user.id).ransack(params[:q])
   end
 
 end
