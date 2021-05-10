@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def search
-    @results = @q.result.order("created_at DESC") 
+    @results = @q.result
     @user = User.find(current_user.id)
   end
 

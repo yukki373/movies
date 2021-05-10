@@ -1,12 +1,16 @@
 <div class="user-index-page">
   <%= render "partial/navbar" %>
 
-  <%= search_form_for @q, url: search_users_path do |f| %>
+  <div class="search-user">
+    <%= search_form_for @q, url: search_users_path do |f| %>
 
-    <%= f.search_field :movie_information_cont, placeholder: "見たい映画" %>
-    <%= f.collection_select :gender_eq, Gender.all, :id, :gender, {include_blank: '性別'} %>        
-    <%= f.submit '検索' %>
-  <% end %>
+      <%= f.search_field :movie_information_cont, placeholder: "見たい映画", class:"form-control" %>
+      <%= f.collection_select :gender_eq, Gender.all, :id, :gender, {include_blank: '男女問わない'}, class:"form-control" %>
+      <div class="user-search__submit-btn">
+        <%= f.submit '検索', class: "btn btn-block text-white" %>
+      </div>
+    <% end %>
+  </div>
 
   <div class="swipe">
     <div class="swipe--status">
@@ -16,28 +20,26 @@
 
     <div class="swipe--cards">
       <% @users.each do |user| %>
-        <%= link_to user_path(user.id) do %>
-          <div class="swipe--card" id="<%= user.id %>">
-            
-            <% if user.profile_image.url.nil? %>
-              <div class="profile-default-img"></div>
-            <% else %>
-              <%= image_tag user.profile_image.url, class: "profile-img" %>
-            <% end %>
-            
-            
-            <p class="profile-name">
-              <%= user.nickname %> 
-              <% if user.residence.present? %>
-                <%= user.residence%>
-              <% end %> <br>
-              <% if user.movie_information.present? %>
-                <%= user.movie_information%>が観たい！
+        <div class="swipe--card" id="<%= user.id %>">
+          <%= link_to user_path(user.id) do %>
+            <div>
+              <% if user.profile_image.url.nil? %>
+                <div class="profile-default-img"></div>
+              <% else %>
+                <%= image_tag user.profile_image.url, class: "profile-img" %>
               <% end %>
-            </p>
-            
-          </div>
-        <% end %>
+            </div>
+          <% end %>
+          <p class="profile-name">
+            <%= user.nickname %> 
+            <% if user.residence.present? %>
+              <%= user.residence%>
+            <% end %> <br>
+            <% if user.movie_information.present? %>
+              <%= user.movie_information%>が観たい！
+            <% end %>
+          </p>
+        </div>
       <% end %>
       <div class="no-user">近くにお相手がいません</div>
     </div>

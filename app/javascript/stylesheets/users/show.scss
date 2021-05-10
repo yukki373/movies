@@ -7,6 +7,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    text-align: center;
     &-default-img {
       height: 128px;
       width: 128px;
@@ -30,6 +31,10 @@
       word-break: break-all;
     }
   }
+}
+
+.prafile-text p {
+  font-size: 24px;
 }
 
 .user-action {
