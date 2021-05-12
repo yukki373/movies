@@ -16,7 +16,7 @@
   <% else %>
     <div class="chat-message__current-user">
       <div class="chat-message__content main-color-bg">
-        <%= chat_message.content %>
+        <%= safe_join(chat_message.content.split("\n"),tag(:br))%>
       </div>
     </div>
   <% end %>
