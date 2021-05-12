@@ -4,7 +4,7 @@
   <div class="search-user">
     <%= search_form_for @q, url: search_users_path do |f| %>
 
-      <%= f.search_field :movie_information_cont, placeholder: "見たい映画", class:"form-control" %>
+      <%= f.search_field :movie_information_cont, placeholder: "観たい映画", class:"form-control" %>
       <%= f.collection_select :gender_eq, Gender.all, :id, :gender, {include_blank: '男女問わない'}, class:"form-control" %>
       <div class="user-search__submit-btn">
         <%= f.submit '検索', class: "btn btn-block text-white" %>
@@ -41,7 +41,7 @@
           </p>
         </div>
       <% end %>
-      <div class="no-user">近くにお相手がいません</div>
+      <div class="no-user">お相手がいません</div>
     </div>
 
     <div class="swipe--buttons">
