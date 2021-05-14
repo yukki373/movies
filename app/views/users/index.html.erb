@@ -3,11 +3,11 @@
 
   <div class="search-user">
     <%= search_form_for @q, url: search_users_path do |f| %>
-
+      <%= f.collection_select :residence_eq, Residence.all, :name, :name, {include_blank: '居住地'}, class:"form-control" %>
+      <%= f.collection_select :gender_eq, Gender.all, :id, :gender, {include_blank: '性別'}, class:"form-control" %>
       <%= f.search_field :movie_information_cont, placeholder: "観たい映画", class:"form-control" %>
-      <%= f.collection_select :gender_eq, Gender.all, :id, :gender, {include_blank: '男女問わない'}, class:"form-control" %>
       <div class="user-search__submit-btn">
-        <%= f.submit '検索', class: "btn btn-block text-white" %>
+        <%= f.submit 'この条件で検索', class: "btn btn-block text-white" %>
       </div>
     <% end %>
   </div>
