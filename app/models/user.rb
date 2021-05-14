@@ -6,6 +6,10 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :nickname
+<<<<<<< Updated upstream
+=======
+    validates :residence
+>>>>>>> Stashed changes
     validates :gender
     validates :birthday
   end
