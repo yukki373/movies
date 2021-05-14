@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light">
   <%= link_to users_path, class: "nav-item nav-link", data: { turbolinks: :false } do %>
-    <span class="<%= 'active' if current_page?(users_path) %>">
+    <span class="<%= 'active' if current_page?(users_path) || current_page?(search_users_path) %>">
       <i class="fas fa-film fa-lg inherit"></i>
     </span>
   <% end %>
