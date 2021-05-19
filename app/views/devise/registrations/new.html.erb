@@ -24,6 +24,10 @@
           <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "パスワード（確認）" %>
         </div>
 
+        <div class="form-group">
+          <%= f.collection_select(:residence, Residence.all, :name, :name, {include_blank: '居住地'}, class:"form-control") %>
+        </div>
+
         <div class="btn-group btn-group-toggle d-flex mb-3" data-toggle="buttons">
           <label class="btn btn-light flex-fill mr-2 active">
             <%= f.radio_button :gender, :man, class: "form-check-input" %>
