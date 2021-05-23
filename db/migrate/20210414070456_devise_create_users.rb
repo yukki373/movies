@@ -13,10 +13,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :movie_information
       t.string :self_introduction
       t.string :profile_image
-      t.string  :residence,          nill: false
-      t.string  :movie_information
-      t.text    :self_introduction
-      t.string  :profile_image
+      t.string :residence,          nill: false
 
 
       ## Recoverable

@@ -59,12 +59,12 @@ ActiveRecord::Schema.define(version: 2021_05_01_072027) do
     t.string "nickname", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.integer "gender"
-    t.date "birthday", null: false
-    t.string "residence"
+    t.string "gender", null: false
+    t.string "birthday", null: false
     t.string "movie_information"
-    t.text "self_introduction"
+    t.string "self_introduction"
     t.string "profile_image"
+    t.string "residence"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
