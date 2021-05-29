@@ -15,8 +15,6 @@ class User < ApplicationRecord
 
     validates :residence
 
-    validates :gender
-
     validates :birthday
   end
 
