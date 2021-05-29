@@ -4,9 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    date_format = "%Y%m%d"
-    birthday = @user.birthday.to_date
-    @age = (Date.today.strftime(date_format).to_i - birthday.strftime(date_format).to_i) / 10000
+    
   end
 
   def index
